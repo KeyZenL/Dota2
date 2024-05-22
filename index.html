@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команда по Dota 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0e0e0e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .player-card {
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+        .player-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #f7ca18;
+        }
+        .player-position {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #f7ca18;
+        }
+        .player-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #c7c7c7;
+            display: none;
+        }
+        .player-avatar {
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #f7ca18;
+        }
+        .btn-toggle-description {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #f7ca18;
+            color: #1f1f1f;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn-toggle-description:hover {
+            background-color: #e5b908;
+        }
+        @media screen and (max-width: 768px) {
+            .player-card {
+                padding: 10px;
+            }
+            .player-name {
+                font-size: 20px;
+            }
+            .player-position {
+                font-size: 16px;
+            }
+            .player-description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="player-card" onmouseover="hoverEffect(this)" onmouseleave="hoverEffect(this)">
+        <img class="player-avatar" src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/579720/18f5c18b83cf9aba982b047d8f9dd45c32d129c2.gif" alt="Player 1 Avatar">
+        <div class="player-info">
+            <div class="player-name">KeyZen</div>
+            <div class="player-position">Позиция в игре: 4</div>
+            <div class="player-description">Лучший</div>
+        </div>
+        <button class="btn-toggle-description" onclick="toggleDescription(this)">Показать описание</button>
+    </div>
+
+    <!-- Повторите этот блок для каждого игрока -->
+    <div class="player-card" onmouseover="hoverEffect(this)" onmouseleave="hoverEffect(this)">
+        <img class="player-avatar" src="https://avatars.cloudflare.steamstatic.com/f4af98b6e7415834788497d23713e6691c749dc0_full.jpg" alt="Player 2 Avatar">
+        <div class="player-info">
+            <div class="player-name">rondsz ϟ</div>
+            <div class="player-position">Позиция в игре: 3</div>
+            <div class="player-description">Мог стать лучшим</div>
+        </div>
+        <button class="btn-toggle-description" onclick="toggleDescription(this)">Показать описание</button>
+    </div>
+
+    <div class="player-card" onmouseover="hoverEffect(this)" onmouseleave="hoverEffect(this)">
+        <img class="player-avatar" src="https://avatars.cloudflare.steamstatic.com/686ba3478defd320f082a4ddade73290b17e664a_full.jpg" alt="Player 2 Avatar">
+        <div class="player-info">
+            <div class="player-name">Retard_whorE</div>
+            <div class="player-position">Позиция в игре: 2</div>
+            <div class="player-description">Лучший среди худших</div>
+        </div>
+        <button class="btn-toggle-description" onclick="toggleDescription(this)">Показать описание</button>
+    </div>
+    <div class="player-card" onmouseover="hoverEffect(this)" onmouseleave="hoverEffect(this)">
+        <img class="player-avatar" src="https://avatars.cloudflare.steamstatic.com/0754e43a9785e5ba013caa3c9b23efdb9141e5d9_full.jpg" alt="Player 2 Avatar">
+        <div class="player-info">
+            <div class="player-name">ГРЯЗНЫЙ РАМИРЕС</div>
+            <div class="player-position">Позиция в игре: 1</div>
+            <div class="player-description">Думает что лучший </div>
+        </div>
+        <button class="btn-toggle-description" onclick="toggleDescription(this)">Показать описание</button>
+    </div>
+    <div class="player-card" onmouseover="hoverEffect(this)" onmouseleave="hoverEffect(this)">
+        <img class="player-avatar" src="https://avatars.cloudflare.steamstatic.com/35eb96b53c7ea67b19746652c319f69d9f726bfc_full.jpg" alt="Player 2 Avatar">
+        <div class="player-info">
+            <div class="player-name">Pegri Nidori</div>
+            <div class="player-position">Позиция в игре: 5</div>
+            <div class="player-description">Татар</div>
+        </div>
+        <button class="btn-toggle-description" onclick="toggleDescription(this)">Показать описание</button>
+</div>
+    <div class="player-card" onmouseover="hoverEffect(this)" onmouseleave="hoverEffect(this)">
+        <img class="player-avatar" src="https://avatars.cloudflare.steamstatic.com/5fcc597f0eccaa179c3909e9d7b7539c0da2de7d_full.jpg" alt="Player 2 Avatar">
+        <div class="player-info">
+            <div class="player-name">v potoke just look in my dead</div>
+            <div class="player-position">Позиция в игре: Тренер</div>
+            <div class="player-description">Одним словом "ПОВОР"</div>
+        </div>
+        <button class="btn-toggle-description" onclick="toggleDescription(this)">Показать описание</button>
+    </div>
+</div>
+
+<script>
+    function hoverEffect(element) {
+        element.style.transform = element.style.transform === 'scale(1.05)' ? 'scale(1)' : 'scale(1.05)';
+    }
+
+    function toggleDescription(button) {
+        var card = button.parentElement;
+        var description = card.querySelector('.player-description');
+        if (description.style.display === 'none') {
+            description.style.display = 'block';
+            button.textContent = 'Скрыть описание';
+        } else {
+            description.style.display = 'none';
+            button.textContent = 'Показать описание';
+        }
+    }
+</script>
+
+</body>
+</html>
